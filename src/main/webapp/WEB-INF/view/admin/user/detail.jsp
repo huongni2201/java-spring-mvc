@@ -33,21 +33,19 @@
                                     <li class="breadcrumb-item active">Orders</li>
                                 </ol>
                                 <div class="mt-5">
-                                    <div class="row justify-content-center">
-                                        <div class="col-md-6 col-12 mx-auto">
-                                            <h2 class="d-flex justify-content-center mb-5">Delete a user ${id}</h2>
-
-                                            <form:form method="POST" action="/admin/user/delete"
-                                                modelAttribute="newUser">
-                                                <div class="form-group mb-3" style="display: none;">
-                                                    <label for="id" class="form-label">ID:</label>
-                                                    <form:input type="text" class="form-control" id="id" path="id"
-                                                        value="${id}" placeholder="Enter ID" />
-                                                </div>
-
-                                                <button type="submit" class="btn btn-primary w-100">Confirm</button>
-                                            </form:form>
-
+                                    <h2>User Detail</h2>
+                                    <hr />
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <ul class="list-group">
+                                                <li class="list-group-item active" aria-current="true">User information
+                                                </li>
+                                                <li class="list-group-item">ID: ${user.id}</li>
+                                                <li class="list-group-item">Email: ${user.email}</li>
+                                                <li class="list-group-item">FullName: ${user.fullName}</li>
+                                                <li class="list-group-item">Address: ${user.address}</li>
+                                            </ul>
+                                            <a href="/admin/user" class="btn btn-success mt-3">Back to List</a>
                                         </div>
                                     </div>
                                 </div>
